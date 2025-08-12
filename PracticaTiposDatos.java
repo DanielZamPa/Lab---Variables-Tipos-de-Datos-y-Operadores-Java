@@ -1,5 +1,6 @@
 package Clase_Lunes;
 import java.util.Scanner;
+import java.time.LocalDate;
 
 public class PracticaTiposDatos {
     public static void main(String[] args){
@@ -7,25 +8,30 @@ public class PracticaTiposDatos {
 
         // Crear una instancia de Scanner para leer datos desde la consola
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("Calculadora de promedios");
+
         // Pedir al usuario que ingrese un notas
         System.out.print("Ingrese sus primer nota: ");
         double nota1 = scanner.nextDouble();
         scanner.nextLine();//Limpieza de buffer
+
         System.out.print("Ingrese sus segunda nota: ");
         double nota2 = scanner.nextDouble();
         scanner.nextLine();//Limpieza de buffer
+
         System.out.print("Ingrese sus tercer nota: ");
         double nota3 = scanner.nextDouble();
         scanner.nextLine();//Limpieza de buffer
+
         //Operacion del promedio de las notas
         double promedio = (nota1+nota2+nota3)/3;
+
         // Mostrar los datos ingresados
         System.out.println("Promedio Nota: "+ promedio);
 
         //Actividad 2:
         //Obtener datos del perfilscanner
-
         System.out.println("Ingrese sus datos del perfil.");
 
         //Pedir dato nombre
@@ -56,6 +62,12 @@ public class PracticaTiposDatos {
         System.out.println("Nacionalidad: " + nacionalidad);
         System.out.println("Ocupación: " + ocupacionPerfil);
         System.out.println("Salario: " + salario);
+
+        //Actividad 2, inciso b:
+        LocalDate fechaActual = LocalDate.now();
+        int añoActual = fechaActual.getYear();
+        int fechaNacimiento = añoActual-edad;
+        System.out.println("Tu año de nacimiento es: " + fechaNacimiento);
 
         //Cerrar scanner
         scanner.close();
