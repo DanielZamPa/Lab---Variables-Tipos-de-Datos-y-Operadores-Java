@@ -22,38 +22,33 @@ public class PracticaTiposDatos {
         double promedio = (nota1+nota2+nota3)/3;
         // Mostrar los datos ingresados
         System.out.println("Promedio Nota: "+ promedio);
-        scanner.close();
 
         //Actividad 2:
-        //Obtener datos del perfil
-
-        //Creacion del scanner
-        Scanner ingresoTeclado = new Scanner(System.in);
+        //Obtener datos del perfilscanner
 
         System.out.println("Ingrese sus datos del perfil.");
+
         //Pedir dato nombre
         System.out.println("Ingresa tu nombre: ");
-        String nombre = ingresoTeclado.nextLine();
+        String nombre = scanner.nextLine();
 
         //Pedir dato edad
         System.out.println("Ingresa tu edad: ");
-        int edad = ingresoTeclado.nextInt();
+        int edad = scanner.nextInt();
 
         //Pedir dato nacionalidad
         System.out.println("Ingresa tu nacionalidad: ");
-        String nacionalidad= ingresoTeclado.next();
+        String nacionalidad= scanner.nextLine();
+        scanner.nextLine();//Limpieza de buffer
 
         //Pedir dato ocupacion
         System.out.println("Ingresa tu ocupación: ");
-        String ocupacionPerfil = ingresoTeclado.nextLine();
+        String ocupacionPerfil = scanner.nextLine();
 
         //Pedir dato salario
         System.out.println("Ingresa tu salario: ");
-        ingresoTeclado.nextLine();//Limpieza de buffer
-        int salario = ingresoTeclado.nextInt();
-
-        //Cerrar scanner
-        ingresoTeclado.close();
+        int salario = scanner.nextInt();
+        scanner.nextLine();//Limpieza de buffer
 
         //Imprimir datos ingresados
         System.out.println("Nombre: " + nombre);
@@ -61,5 +56,8 @@ public class PracticaTiposDatos {
         System.out.println("Nacionalidad: " + nacionalidad);
         System.out.println("Ocupación: " + ocupacionPerfil);
         System.out.println("Salario: " + salario);
+
+        //Cerrar scanner
+        scanner.close();
     }
 }
